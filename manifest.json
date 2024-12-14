@@ -1,1 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Stop the Hate Chrome Extension",
+  "version": "1.0",
+  "description": "Detect and blur hate speech or profanity on websites to create a safer browsing experience.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "content.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
 
