@@ -1,1 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Profanity Blocker",
+  "version": "1.0",
+  "description": "Detects and blurs profanity on websites",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
 
